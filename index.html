@@ -365,7 +365,7 @@
           div:    (c[1] || "").trim(),
           con:    (c[2] || "").trim().toUpperCase(),
           equipo: (c[3] || "").trim(),
-          pts:    parseFloat(c[4]) || 0,
+          pts:    parseFloat((c[4] || '0').replace(',', '.')) || 0,
         };
       }).filter(r => r.equipo !== "");
     }
